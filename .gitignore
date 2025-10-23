@@ -1,0 +1,69 @@
+# Flutter
+#
+# This file is used to ignore files created by the Flutter tooling, and other files that
+# should not be committed to your repository.
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
+
+# Flutter and Dart artifacts
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+pubspec.lock
+lib/generated_plugin_registrant.dart
+.flutter-plugins-dependencies
+
+# Build artifacts for different platforms
+/android/app/build/
+/android/key.properties
+/android/local.properties
+/android/.gradle
+/android/gradlew
+/android/gradlew.bat
+
+/ios/build/
+/ios/Pods/
+/ios/Podfile.lock
+/ios/Runner/GeneratedPluginRegistrant.h
+/ios/Runner/GeneratedPluginRegistrant.m
+/ios/Flutter/App.framework
+/ios/Flutter/Debug.xcconfig
+/ios/Flutter/Release.xcconfig
+/ios/Flutter/Generated.xcconfig
+/ios/Runner.xcodeproj/project.xcworkspace/
+/ios/Runner.xcodeproj/xcshareddata/
+/ios/Runner.xcodeproj/xcuserdata/
+/ios/Runner.xcworkspace/
+/ios/Flutter/flutter_export_environment.sh
+
+/macos/build/
+/macos/Pods/
+/macos/Podfile.lock
+/macos/Flutter/Generated.xcconfig
+/macos/Flutter/ephemeral.xcconfig
+/macos/Runner.xcworkspace
+/macos/Runner.xcodeproj/project.xcworkspace/
+/macos/Runner.xcodeproj/xcuserdata/
+
+/linux/build/
+/linux/flutter/ephemeral/
+
+/windows/build/
+/windows/flutter/ephemeral/
+/windows/runner/Debug/
+/windows/runner/Profile/
+/windows/runner/Release/
+
+# Miscellaneous
+*.class
+*.log
+*.patch
+*.pid
+*.swp
+.DS_Store
