@@ -53,7 +53,7 @@ class _MyTestHomePageState extends State<MyTestHomePage> {
         windowManager.setOpacity(1.0);
       },
       onExit: (_) {
-        windowManager.setOpacity(0.1);
+        windowManager.setOpacity(0.01);
       },
       child: Scaffold(
         backgroundColor: Colors.white,
