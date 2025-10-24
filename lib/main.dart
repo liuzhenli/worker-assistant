@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:window_manager/window_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
   WindowOptions windowOptions = const WindowOptions(
+    size: Size(800, 600),
     backgroundColor: Colors.transparent,
     title: '阅读，遇见更大的世界',
   );
@@ -39,9 +40,8 @@ class MyTestHomePage extends StatefulWidget {
 }
 
 class _MyTestHomePageState extends State<MyTestHomePage> {
-  final WebViewController _controller = WebViewController()
-    ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    ..loadRequest(Uri.parse('https://r.qq.com'));
+  final InAppWebViewSettings _settings =
+      InAppWebViewSettings(javaScriptEnabled: true);
 
   // 1. 添加一个状态来跟踪窗口是否置顶
   bool _isAlwaysOnTop = false;
@@ -57,9 +57,13 @@ class _MyTestHomePageState extends State<MyTestHomePage> {
       },
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: WebViewWidget(controller: _controller),
+        body: InAppWebView(
+          initialUrlRequest: URLRequest(url: WebUri("https://r.qq.com")),
+          initialSettings: _settings,
+        ),
         // 2. 添加悬浮按钮
         floatingActionButton: FloatingActionButton(
+          mini: true,
           onPressed: () async {
             // 3. 切换置顶状态并调用 windowManager
             setState(() {

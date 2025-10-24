@@ -1,4 +1,4 @@
-name: read_assistant
+name: worker_assistant
 description: "A Read Assistant."
 publish_to: 'none'
 
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   window_manager: ^0.5.1
-  webview_flutter: ^4.7.0
+  flutter_inappwebview: ^6.0.0
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
