@@ -2,7 +2,7 @@ name: read_assistant
 description: "A Read Assistant."
 publish_to: 'none'
 
-version: 1.0.3+3
+version: 1.0.5+5
 
 environment:
   sdk: ^3.9.2
